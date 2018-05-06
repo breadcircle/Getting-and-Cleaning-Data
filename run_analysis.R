@@ -43,4 +43,4 @@ combined$activity <- factor(combined$activity,
 melted <- melt(combined, id=c("subjectID","activity"))
 tidy <- dcast(melted, subjectID+activity ~ variable, mean)
 
-write.csv(tidy, "TIDYresult.csv",row.names = FALSE)
+write.table(tidy, "TIDYresult.txt",row.names = FALSE)
